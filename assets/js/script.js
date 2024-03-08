@@ -1,20 +1,41 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
-addEmployeesBtn.addEventListener('click', function() {
-    const firstName = prompt("Employee's First Name");
-    const lastName = prompt("Employee's Last Name");
-    const salary = prompt("Employee's Salary");
-    console.log(firstName);
-    console.log(lastName);
-    console.log(salary);
-  })
 
 
 // Collect employee data
-const collectEmployees = function() {
+const collectEmployees = function() {}
   // TODO: Get user input to create and return an array of employee objects
-}
+addEmployeesBtn.addEventListener('click', function() {
+
+    var firstName = prompt("Employee's First Name");
+    var lastName = prompt("Employee's Last Name");
+    var salary = prompt("Employee's Salary");
+    addAgain = window.confirm("Add another employee?")
+    console.log(firstName);
+    console.log(lastName);
+    console.log(salary);
+
+   while (addAgain == true) {
+     var firstName = prompt("Employee's First Name");
+     var lastName = prompt("Employee's Last Name");
+     var salary = prompt("Employee's Salary");
+     console.log(firstName);
+     console.log(lastName);
+     console.log(salary);
+     addAgain = window.confirm("Add another employee?")
+  
+     if (addAgain == !true) {
+      break;
+     }
+   }
+  })
+
+
+
+    // const employeesArray = [firstName, lastName, salary]
+    // console.log(employeesArray);
+
 
 
 
@@ -92,4 +113,4 @@ const trackEmployeeData = function() {
 }
 
 // Add event listener to 'Add Employees' button
-addEmployeesBtn.addEventListener('click', trackEmployeeData);
+addEmployeesBtn.addEventListener('click', trackEmployeeData)
