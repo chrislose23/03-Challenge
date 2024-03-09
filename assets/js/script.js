@@ -1,21 +1,12 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
-
-
 // Collect employee data
-const collectEmployees = function() {}
+const collectEmployees = function() {
+  
   // TODO: Get user input to create and return an array of employee objects
 addEmployeesBtn.addEventListener('click', function() {
-
-    // var firstName = prompt("Employee's First Name");
-    // var lastName = prompt("Employee's Last Name");
-    // var salary = prompt("Employee's Salary");
-    //addAgain = window.confirm("Add another employee?")
-    // console.log(firstName);
-    // console.log(lastName);
-    // console.log(salary);
-addAgain = true
+  addAgain = true
    while (addAgain == true) {
      var firstName = prompt("Employee's First Name");
      var lastName = prompt("Employee's Last Name");
@@ -23,18 +14,31 @@ addAgain = true
      console.log(firstName);
      console.log(lastName);
      console.log(salary);
+
+     class Employee {
+      constructor(firstName, lastName, salary) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.salary = salary;
+      }
+    }
+    const employeesArray = new Employee(firstName, lastName, salary)
+    console.log(employeesArray);
+
+
+
+
      addAgain = window.confirm("Add another employee?")
   
-     if (addAgain == false) {
+      if (addAgain == false) {
       break;
-     }
-   }
-  })
+      }
+    }
+})
+}
 
 
 
-    // const employeesArray = [firstName, lastName, salary]
-    // console.log(employeesArray);
 
 
 
@@ -101,13 +105,13 @@ const trackEmployeeData = function() {
 
   getRandomEmployee(employees);
 
-  employees.sort(function(a,b) {
-    if (a.lastName < b.lastName) {
-      return -1;
-    } else {
-      return 1;
-    }
-  });
+  // employees.sort(function(a,b) {
+  //   if (a.lastName < b.lastName) {
+  //     return -1;
+  //   } else {
+  //     return 1;
+  //   }
+  // });
 
   displayEmployees(employees);
 }
