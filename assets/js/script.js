@@ -8,14 +8,14 @@ const collectEmployees = function() {}
   // TODO: Get user input to create and return an array of employee objects
 addEmployeesBtn.addEventListener('click', function() {
 
-    var firstName = prompt("Employee's First Name");
-    var lastName = prompt("Employee's Last Name");
-    var salary = prompt("Employee's Salary");
-    addAgain = window.confirm("Add another employee?")
-    console.log(firstName);
-    console.log(lastName);
-    console.log(salary);
-
+    // var firstName = prompt("Employee's First Name");
+    // var lastName = prompt("Employee's Last Name");
+    // var salary = prompt("Employee's Salary");
+    //addAgain = window.confirm("Add another employee?")
+    // console.log(firstName);
+    // console.log(lastName);
+    // console.log(salary);
+addAgain = true
    while (addAgain == true) {
      var firstName = prompt("Employee's First Name");
      var lastName = prompt("Employee's Last Name");
@@ -25,7 +25,7 @@ addEmployeesBtn.addEventListener('click', function() {
      console.log(salary);
      addAgain = window.confirm("Add another employee?")
   
-     if (addAgain == !true) {
+     if (addAgain == false) {
       break;
      }
    }
