@@ -2,10 +2,10 @@
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
-const collectEmployees = function() {
   
   // TODO: Get user input to create and return an array of employee objects
 addEmployeesBtn.addEventListener('click', function() {
+  public:
   addAgain = true
    while (addAgain == true) {
      var firstName = prompt("Employee's First Name");
@@ -16,12 +16,13 @@ addEmployeesBtn.addEventListener('click', function() {
      console.log(salary);
 
      class Employee {
+      
       constructor(firstName, lastName, salary) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary = salary;
       }
-    }
+    };
     const employeesArray = new Employee(firstName, lastName, salary)
     console.log(employeesArray);
 
@@ -35,7 +36,7 @@ addEmployeesBtn.addEventListener('click', function() {
       }
     }
 })
-}
+const collectEmployees = function() {}
 
 
 
